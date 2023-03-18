@@ -12,7 +12,7 @@ setup(
     description="A H-hat jupyter kernel.",
     long_description=readme,
     include_package_data=True,
-    name="H-hat jupyter kernel",
+    name="hhat_jupyter_kernel",
     packages=find_packages(include=["hhat_jupyter_kernel", "hhat_jupyter_kernel.*"]),
     requires=requirements,
     version=version

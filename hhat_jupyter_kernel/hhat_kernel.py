@@ -1,26 +1,24 @@
 import os
 import sys
-from hhat_jupyter_kernel import version
 
-from hhat_lang import version as hhat_version
+from hhat_lang import __version__ as hhat_version
 from hhat_lang.grammar.cst import parsing_raw_code
 from hhat_lang.interpreter.pre_evaluator import PreEvaluator
 from hhat_lang.interpreter.evaluator import Evaluator
 
-from metakernel import MetaKernel, ProcessMetaKernel
 from ipykernel.kernelbase import Kernel
 from ipykernel.kernelapp import IPKernelApp
 
 
 class HhatKernel(Kernel):
     app_name = "hhat_jupyter_kernel"
-    implementation = 'hhat'
+    implementation = 'hhat_lang'
     implementation_version = hhat_version
     language = 'H-hat'
     language_version = hhat_version
     banner = 'H-hat is a high level abstraction quantum programming language.'
     language_info = {
-        'name': 'hhat',
+        'name': 'hhat_lang',
         'mimetype': 'text/hhat_lang',
         'file_extension': '.hat',
         'pygments_lexer': 'python',
